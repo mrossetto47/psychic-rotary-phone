@@ -30,3 +30,21 @@ while True:
 # Mostrando as notas registradas
 print("Notas registradas:", lista_notas)
 # Mensagem ao usuário sobre o cálculo da média e contagem de alunos acima da média
+print("Agora, calcularemos a média e a quantidade de alunos acima da média.")
+print("Pressione Enter para continuar...")
+input()  # Espera o usuário pressionar Enter
+
+#Cálculo da média
+media = sum(lista_notas)/len(lista_notas)
+acima = 0
+
+# Cálculo de alunos acima da média
+for i in range (len(lista_notas)):
+    if lista_notas[i]>media:
+        acima +=1
+
+# print das informações
+
+print("A média da turma foi de ",media," com ",acima, "alunos acima da média.")
+
+######################################################################################
