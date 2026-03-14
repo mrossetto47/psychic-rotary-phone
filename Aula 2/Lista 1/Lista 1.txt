@@ -1,0 +1,102 @@
+LISTA DE EXERCÍCIOS - PYTHON (TEMA: LISTAS)
+=============================================
+
+NÍVEL 1 - INICIANTE
+-------------------
+
+1. SOMA DOS ELEMENTOS
+   Escreva um programa que crie uma lista com 5 números inteiros fornecidos pelo usuário 
+   e exiba a soma de todos os elementos.
+
+2. MAIOR E MENOR VALOR
+   Crie um programa que leia 7 números inteiros, armazene-os em uma lista e mostre 
+   o maior e o menor valor digitados, juntamente com suas respectivas posições.
+
+3. CONTAGEM DE PARES
+   Faça um programa que gere uma lista com 10 números aleatórios entre 1 e 100 
+   e mostre quantos deles são pares.
+
+4. INVERTENDO A LISTA
+   Escreva um programa que leia 6 palavras e as armazene em uma lista. 
+   Em seguida, exiba a lista na ordem inversa sem usar o método reverse() ou fatiamento [::-1].
+
+NÍVEL 2 - INTERMEDIÁRIO
+-----------------------
+
+5. MÉDIA E ACIMA
+   Crie um programa que leia as notas de uma turma (quantidade indefinida). 
+   O programa deve parar quando o usuário digitar -1. 
+   Calcule a média da turma e mostre quantos alunos obtiveram nota acima dessa média.
+
+6. REMOVENO DUPLICATAS
+   Desenvolva um programa que receba uma lista de números inteiros (pode ter valores repetidos) 
+   e crie uma nova lista apenas com os valores únicos, mantendo a ordem de primeira aparição.
+
+7. LISTAS DENTRO DE LISTAS
+   Faça um programa que crie uma matriz 3x3 (3 linhas e 3 colunas) preenchida com números 
+   fornecidos pelo usuário. No final, exiba a matriz na tela e mostre:
+   - A soma de todos os elementos
+   - A soma da primeira linha
+   - A soma da diagonal principal
+
+8. INTERCALANDO LISTAS
+   Escreva um programa que leia duas listas de 5 elementos cada e gere uma terceira lista 
+   com os elementos intercalados (primeiro da lista A, primeiro da lista B, segundo da lista A, etc.)
+
+NÍVEL 3 - AVANÇADO
+------------------
+
+9. ANÁLISE DE VENDAS
+   Uma loja registra suas vendas diárias em uma lista. Cada venda é representada por uma 
+   sublista contendo [nome_produto, quantidade, preco_unitario]. 
+   Crie um programa que:
+   - Calcule o faturamento total
+   - Encontre o produto mais vendido (em quantidade)
+   - Crie uma lista apenas com os produtos que tiveram faturamento acima de R$100,00
+   - Mostre a média de preço dos produtos vendidos
+
+10. PESQUISA EM LISTA ORDENADA
+    Implemente uma função chamada pesquisa_binaria que receba uma lista ordenada 
+    e um valor alvo. A função deve retornar a posição do valor na lista ou -1 se não existir.
+    Não utilize funções prontas como index() ou in.
+
+NÍVEL 4 - DESAFIO
+-----------------
+
+11. LISTA ESPIRAL
+    Crie um programa que gere uma matriz quadrada de tamanho N (fornecido pelo usuário) 
+    preenchida com números em ordem crescente no formato espiral, começando do canto 
+    superior esquerdo e girando no sentido horário.
+    
+    Exemplo para N=4:
+    1   2   3   4
+    12 13  14   5
+    11 16  15   6
+    10  9   8   7
+
+12. COMBINAÇÕES E PERMUTAÇÕES
+    Escreva uma função recursiva que receba uma lista de elementos (sem repetição) 
+    e retorne uma lista contendo todas as permutações possíveis desses elementos.
+    
+    Exemplo: Entrada = [1, 2, 3]
+    Saída = [[1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1]]
+
+BÔNUS - PROJETO UM POUCO MAIS COMPLEXO
+----------------------
+
+13. SISTEMA DE GERENCIAMENTO DE ESTOQUE
+    Desenvolva um sistema simples de estoque utilizando listas. O sistema deve:
+    - Armazenar produtos com código, nome, quantidade e preço
+    - Permitir cadastrar, consultar, atualizar e excluir produtos
+    - Gerar relatório de produtos com estoque baixo (menos de 5 unidades)
+    - Calcular o valor total do estoque
+    - Permitir buscar produtos por nome ou código
+    - Implementar um menu interativo para o usuário
+
+DICAS IMPORTANTES:
+------------------
+- Teste cada exercício com diferentes entradas
+- Tente resolver primeiro sem consultar soluções prontas
+- Para os níveis mais avançados, quebre o problema em partes menores
+- Utilize comentários no código para explicar sua lógica
+- Pratique a manipulação de listas com os métodos: append(), insert(), remove(), pop(), sort()
