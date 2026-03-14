@@ -1,9 +1,13 @@
-"""NÍVEL 2 - INTERMEDIÁRIO
+"""LISTA DE EXERCÍCIOS - PYTHON (TEMA: LISTAS)
+=============================================
+
+NÍVEL 2 - INTERMEDIÁRIO
 -----------------------
 
 6. REMOVENO DUPLICATAS
    Desenvolva um programa que receba uma lista de números inteiros (pode ter valores repetidos) 
-   e crie uma nova lista apenas com os valores únicos, mantendo a ordem de primeira aparição."""
+   e crie uma nova lista apenas com os valores únicos, mantendo a ordem de primeira aparição.
+   """
 
 # Mensagem inicial ao usuário
 print("Olá! Este programa irá ler uma lista de números inteiros e remover os duplicados, mantendo a ordem de primeira aparição.")
@@ -31,3 +35,5 @@ for numero in lista_usuario:
 
 # Mensagem ao Usuário
 print("A lista organizada é a seguinte:", lista_unica)
+
+############################################################################################################
