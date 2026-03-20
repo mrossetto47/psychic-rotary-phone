@@ -42,8 +42,19 @@ print("Agora, faremos os cálculos.")
 print("Pressione Enter para continuar...")
 input()  # Espera o usuário pressionar Enter
 
-# Calculando a soma de todos os elementos
+# Calculando a soma da primeira linha
 sum_1 = sum(linha1)
+
+# Calculando a soma de todos os elementos
 sum_all = sum_1+sum(linha2)+sum(linha3)
 
-print(sum_all)
+#Calculando a soma da Diagonal Principal
+sum_diag= matriz[0][0] + matriz[1][1] + matriz[2][2]
+
+#Printando os resultados para o usuário
+
+print("A soma dos elementos da primeira linha é:",sum_1)
+print("A soma de todos os elementos é:",sum_all)
+print("A soma dos elementos da diagonal principal é:",sum_diag)
+
+#################################################################################
