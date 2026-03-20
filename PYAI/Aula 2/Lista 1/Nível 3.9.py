@@ -37,6 +37,7 @@ preco_unit=float()
 #Loop para leitura de produtos do usuário
 while True:
     item=input("\nDigite o nome do item ou 'fim' para terminar: ")
+    # Verificando se o usuario digitou o 'item' como 'fim'
     if item!="fim":
         qtde=input("\nAgora, digite a quantidade deste item vendida: ")
         preco_unit=input("\nDigite agora o preço unitário em reais (utilize ponto como separador decimal): ")

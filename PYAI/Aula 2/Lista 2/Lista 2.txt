@@ -1,0 +1,163 @@
+LISTA DE EXERCÍCIOS - PYTHON (TEMA: DICIONÁRIOS)
+=================================================
+
+NÍVEL 1 - INICIANTE
+-------------------
+
+1. AGENDA TELEFÔNICA SIMPLES
+   Crie um dicionário vazio e adicione 5 contatos com nome como chave e telefone como valor.
+   Depois, permita que o usuário:
+   - Consulte o telefone de um contato pelo nome
+   - Exiba todos os contatos cadastrados
+   - Verifique se um contato específico existe na agenda
+
+2. CONTAGEM DE CARACTERES
+   Escreva um programa que receba uma palavra ou frase do usuário e crie um dicionário
+   onde cada chave é uma letra e cada valor é o número de vezes que essa letra aparece.
+   Considere apenas letras (ignore espaços e diferenças entre maiúsculas/minúsculas).
+
+3. NOTAS DOS ALUNOS
+   Crie um dicionário com nomes de 4 alunos e suas respectivas notas (valor inteiro de 0 a 10).
+   Depois, calcule e mostre:
+   - A média da turma
+   - O aluno com a maior nota
+   - Quantos alunos foram aprovados (nota >= 7)
+
+4. DICIONÁRIO DE TRADUÇÃO
+   Faça um mini-dicionário Português-Inglês com pelo menos 10 palavras.
+   O programa deve permitir que o usuário digite uma palavra em português
+   e mostre sua tradução para inglês (ou mensagem de não encontrado).
+
+NÍVEL 2 - INTERMEDIÁRIO
+-----------------------
+
+5. ESTOQUE DE PRODUTOS
+   Uma loja mantém um dicionário com produtos e suas quantidades em estoque:
+   estoque = {"arroz": 50, "feijão": 30, "macarrão": 20, "óleo": 15}
+   
+   Crie um programa que:
+   - Receba uma venda (produto e quantidade)
+   - Verifique se há estoque suficiente
+   - Atualize o estoque após a venda
+   - Mostre um alerta se o produto ficar com estoque abaixo de 5 unidades
+
+6. AGRUPANDO POR IDADE
+   Escreva um programa que receba informações de várias pessoas (nome e idade).
+   O programa deve parar quando o usuário digitar "fim" no nome.
+   Depois, crie um novo dicionário onde as chaves são as idades e os valores
+   são listas com os nomes das pessoas que têm aquela idade.
+
+7. NOTAS POR DISCIPLINA
+   Crie um dicionário que armazene as notas de um aluno em diferentes disciplinas.
+   Cada disciplina é uma chave que contém uma lista com 3 notas (bimestres).
+   O programa deve:
+   - Calcular a média por disciplina
+   - Calcular a média geral do aluno
+   - Mostrar em quais disciplinas o aluno ficou acima da média geral
+
+8. MESCLANDO DICIONÁRIOS
+   Desenvolva uma função chamada mesclar_dicionarios que receba dois dicionários
+   e retorne um novo dicionário combinando as chaves de ambos. Se houver chaves repetidas,
+   some os valores correspondentes.
+   
+   Exemplo:
+   d1 = {"a": 10, "b": 20, "c": 30}
+   d2 = {"b": 5, "c": 15, "d": 40}
+   Resultado: {"a": 10, "b": 25, "c": 45, "d": 40}
+
+NÍVEL 3 - AVANÇADO
+------------------
+
+9. SISTEMA DE VOTAÇÃO
+   Crie um programa para gerenciar uma votação com múltiplos candidatos.
+   O programa deve:
+   - Permitir cadastrar candidatos (nome e número)
+   - Registrar votos (validando se o número do candidato existe)
+   - Permitir voto em branco (0) e voto nulo (qualquer outro número)
+   - No final, mostrar:
+     * Total de votos por candidato
+     * Percentual de votos válidos
+     * Candidato vencedor
+     * Total de votos brancos e nulos
+   - Utilizar dicionários para armazenar todas as informações
+
+10. ANÁLISE DE TEXTOS
+    Desenvolva um programa que leia um arquivo de texto (ou uma string longa fornecida)
+    e crie um dicionário com análise estatística contendo:
+    - Palavras mais frequentes (top 10)
+    - Número total de palavras
+    - Número de palavras únicas
+    - Tamanho médio das palavras
+    - Dicionário de frequência onde as chaves são letras e valores são contagens
+    - Agrupamento de palavras por tamanho (ex: palavras com 1 letra, 2 letras, etc.)
+    
+    Dica: Use split() para separar palavras e ignore pontuação.
+
+11. SISTEMA DE BIBLIOTECA
+    Modele uma biblioteca usando dicionários aninhados. Cada livro deve ter:
+    - ISBN (código único) como chave principal
+    - Informações: título, autor, ano, gênero, status (disponível/emprestado)
+    
+    Implemente funções para:
+    - Cadastrar novo livro
+    - Emprestar livro (mudar status e registrar para quem)
+    - Devolver livro
+    - Buscar livros por autor, gênero ou ano
+    - Listar livros atrasados (considerar prazo de 14 dias)
+    - Gerar relatório de livros mais emprestados
+
+NÍVEL 4 - DESAFIO
+------------------
+
+12. GRAFOS COM DICIONÁRIOS
+    Represente um grafo direcionado usando dicionários, onde cada chave é um vértice
+    e cada valor é uma lista de vértices adjacentes (arestas de saída).
+    
+    Implemente as seguintes funções:
+    - adicionar_vertice(grafo, vertice)
+    - adicionar_aresta(grafo, origem, destino, peso=1) - use tuplas (destino, peso)
+    - remover_vertice(grafo, vertice)
+    - bfs(grafo, inicio) - busca em largura retornando ordem de visita
+    - dfs(grafo, inicio) - busca em profundidade retornando ordem de visita
+    - menor_caminho(grafo, origem, destino) - usando algoritmo de Dijkstra
+    - detectar_ciclo(grafo) - verifica se existe ciclo no grafo
+
+    Exemplo de grafo:
+    grafo = {
+        "A": [("B", 4), ("C", 2)],
+        "B": [("C", 1), ("D", 5)],
+        "C": [("D", 8), ("E", 10)],
+        "D": [("E", 2)],
+        "E": []
+    }
+
+13. SISTEMA DE RECOMENDAÇÃO (BÔNUS)
+    Crie um sistema simples de recomendação baseado em conteúdo usando dicionários.
+    
+    Estrutura de dados:
+    usuarios = {
+        "joao": {"filmes": ["Matrix", "Interestelar"], "livros": ["1984", "Duna"]},
+        "maria": {"filmes": ["Matrix", "Senhor dos Anéis"], "musicas": ["Bohemian Rhapsody"]},
+        # ... mais usuários
+    }
+    
+    Itens (filmes, livros, músicas) com tags/categorias:
+    itens = {
+        "Matrix": {"tipo": "filme", "genero": "Ficção Científica", "ano": 1999},
+        "1984": {"tipo": "livro", "genero": "Distopia", "autor": "George Orwell"},
+        # ... mais itens
+    }
+    
+    O sistema deve:
+    - Calcular similaridade entre usuários baseado nos itens que consomem
+    - Recomendar itens para um usuário baseado no que usuários similares gostam
+    - Sugerir itens similares a um determinado item baseado nas tags
+    - Permitir que usuário avalie itens (1 a 5 estrelas) e use isso para recomendações
+
+DICAS IMPORTANTES:
+------------------
+- Explore métodos de dicionários: keys(), values(), items(), get(), setdefault()
+- Use dicionários aninhados para estruturas mais complexas
+- Lembre-se de tratar erros (KeyError) ao acessar chaves que podem não existir
+- Para ordenar dicionários, use sorted() com parâmetros adequados
+- Combine listas e dicionários para soluções mais eficientes
