@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./PYAI/Aula 3"
+    ]
+}
