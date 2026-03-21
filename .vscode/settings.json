@@ -1,5 +1,8 @@
 {
     "python.analysis.extraPaths": [
-        "./PYAI/Aula 3"
+        "./PYAI/Aula 3",
+        "./PYAI/Aula 3/Parte 3b/src",
+        "./PYAI/Aula 3/Parte 3b/src",
+        "./PYAI/Aula 3/Parte 3b/src/universidade"
     ]
 }
