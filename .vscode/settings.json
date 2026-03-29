@@ -1,7 +1,8 @@
 {
     "python.analysis.extraPaths": [
-        "./PYAI/Aula 4/src",
-        "./PYAI/Aula 4/src/universidade",
-        "./PYAI/Aula 4/src"
-    ]
+        "./PYAI/Aulas OO/src",
+        "./PYAI/Aulas OO/src/universidade",
+        "c:/Users/mathe/Documents/GitHub/psychic-rotary-phone/PYAI/Aulas OO/",  ],
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda"
 }

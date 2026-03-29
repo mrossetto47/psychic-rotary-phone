@@ -1,18 +1,19 @@
 class ConteudoMinistrado:
-    __PROX_ID = 0
+    __PROX_ID = 0 # Variável Estática (“Compartilhado” entre todos os objetos do mesmo tipo)
     def __init__(self, descricao, carga_horaria):
         self.__descricao = descricao
         self.__carga_horaria = carga_horaria
         self.__id = ConteudoMinistrado.__PROX_ID
         ConteudoMinistrado.__PROX_ID += 1
 
+
     @property
     def descricao(self):
         return self.__descricao
-    
+
     @property
-    def carga_horaria(self):
-        return self.__carga_horaria
+    def carga_horaria(self):   
+        return self.__carga_horaria 
     
     @property
     def id(self):
