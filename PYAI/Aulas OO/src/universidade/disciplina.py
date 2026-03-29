@@ -1,14 +1,26 @@
 from .conteudo_ministrado import ConteudoMinistrado
+from .professor import Professor
 
 class Disciplina: # Disciplinas devem ter nome, carga horária e professor
     def __init__(self, nome, carga_horaria = 60, professor = None):
         self.__nome = nome
-        if carga_horaria > 0: # Carga deve ser positiva
-            self.__carga_horaria = carga_horaria
-        else:
-            self.__carga_horaria = -1 #Carga inválida
-        self.__professor = professor
+        #Boa prática. Para evitar redundâncias na verificação, vamos chamar os setters aqui.
+        # A verificação é feita neles, nos setters da classe Professor
+        self.carga_horaria = carga_horaria
+        self.professor = professor
         self.__conteudos_ministrados = []
+
+    @property
+    def professor(self):
+        return self.__professor
+    
+    @professor.setter
+    def professor(self, professor):
+        #Caso o objeto sendo passado não seja um professor, ou algo que derive (seja um tipo de) professor, não vamos aceitar.
+        if professor is not None and not issubclass(type(professor), Professor): # Para isso usa issubclass()
+            raise TypeError("parâmetro professor deve derivar da classe Professor")
+        self.__professor = professor
+
 
     @property
     def conteudo_ministrado(self):
@@ -16,6 +28,7 @@ class Disciplina: # Disciplinas devem ter nome, carga horária e professor
     
     def adicionar_conteudo_ministrado(self, conteudo, carga):
         self.__conteudos_ministrados.append(ConteudoMinistrado(conteudo, carga))
+
 
     @property
     def nome(self):

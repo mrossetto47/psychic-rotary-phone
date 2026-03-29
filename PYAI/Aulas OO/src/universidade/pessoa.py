@@ -4,7 +4,13 @@ class Pessoa:
         if cpf != -1 and self.__validar_cpf(cpf):
             self.__cpf = cpf
         else:
-            self.__cpf = -1
+            raise  ValueError("CPF Inválido") # Lança uma exceção, como se levantasse uma bandeira, sinalizando problema
+
+# O duplo underscore torna o atributo privado (pode ser acessado apenas dentro da classe)
+# Com isso, vamos precisar criar funções para que os atributos possam ser modificados "de fora"
+# Essas funções são os "setters" e "getters (@property)"
+# Eles criam um atributo "virtual" que pode ser acessado de fora, mas que na verdade é um método (função) da classe
+# Podemos utilizar os setters para validação (por exemplo a função validar cpf)
 
     @property
     def nome(self):
@@ -23,9 +29,9 @@ class Pessoa:
         if self.__validar_cpf(cpf):
             self.__cpf = cpf
         else:
-            self.__cpf = -1 #Indica CPF inválido
+            raise  ValueError("CPF Inválido") #Indica CPF inválido
 
-
+# Esta é uma função dentro da classe, um método
 
     def __validar_cpf(self,cpf_teste):
         somatorio_valida_ultimo = 0
@@ -61,8 +67,3 @@ class Pessoa:
         
         return True # CPF válido
 
-# O duplo underscore torna o atributo privado (pode ser acessado apenas dentro da classe)
-# Com isso, vamos precisar criar funções para que os atributos possam ser modificados "de fora"
-# Essas funções são os "setters" e "getters (@property)"
-# Eles criam um atributo "virtual" que pode ser acessado de fora, mas que na verdade é um método (função) da classe
-# Podemos utilizar os setters para validação (por exemplo a função validar cpf)
